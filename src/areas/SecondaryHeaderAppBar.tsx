@@ -1,8 +1,9 @@
 import React from "react";
-import { AppBar, Grid, Toolbar } from "@mui/material";
+import { AppBar, Button, Grid, Toolbar, Typography } from "@mui/material";
 import { SecondaryHeaderMenuItem } from "./SecondaryHeaderItem";
 import backgroundImage from "./../assets/background-image.png";
 import logo from "./../assets/the-brand-lab-logo.png";
+import { secondaryMenuItems } from "../data/dummyData";
 
 export type HeaderMenuItem = {
   name: string;
@@ -10,23 +11,6 @@ export type HeaderMenuItem = {
 };
 
 export const SecondaryHeaderAppBar = () => {
-  const menuItems: HeaderMenuItem[] = [
-    {
-      name: "Impact",
-      subMenuItemList: [
-        "Annual Report",
-        "BrandLab Stories",
-        "State of the Industry",
-      ],
-    },
-    { name: "Programs", subMenuItemList: ["Item 1", "Item 2", "Item 3"] },
-    {
-      name: "Join the Movement",
-      subMenuItemList: ["Item 1", "Item 2", "Item 3"],
-    },
-    { name: "Job Board", subMenuItemList: ["Item 1", "Item 2", "Item 3"] },
-  ];
-
   return (
     <AppBar
       position="static"
@@ -43,13 +27,38 @@ export const SecondaryHeaderAppBar = () => {
 
           <Grid item>
             <Grid container spacing={7}>
-              {menuItems.map((menuItem) => (
+              {secondaryMenuItems.map((menuItem) => (
                 <SecondaryHeaderMenuItem menuItem={menuItem} />
               ))}
             </Grid>
           </Grid>
         </Grid>
       </Toolbar>
+      <Grid justifyContent={"center"} marginX={50} marginY={"auto"}>
+        <Grid item>
+          <Typography
+            textAlign={"center"}
+            fontFamily={"Felix"}
+            fontSize={"2em"}
+          >
+            We believe in a future industry that reaches new heights through the
+            creativity of people of any race or socioeconomic background.
+          </Typography>
+        </Grid>
+        <Grid item marginTop={5} textAlign={"center"}>
+          <Button onClick={() => console.log("clicked button")}>
+            <Typography
+              fontSize={18}
+              paddingX={2}
+              paddingY={0.5}
+              textTransform={"none"}
+              fontWeight={"bold"}
+            >
+              Learn More
+            </Typography>
+          </Button>
+        </Grid>
+      </Grid>
     </AppBar>
   );
 };
