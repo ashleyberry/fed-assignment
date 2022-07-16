@@ -9,6 +9,7 @@ import {
   Typography,
 } from "@mui/material";
 import { Facebook, Twitter, YouTube } from "@mui/icons-material";
+import { mainMenuItems } from "../data/dummyData";
 
 export const HeaderAppBar = () => {
   const socialIcons = [
@@ -16,11 +17,10 @@ export const HeaderAppBar = () => {
     { name: "Twitter,", icon: <Twitter /> },
     { name: "YouTube", icon: <YouTube /> },
   ];
-  const pages = ["About", "News", "Contact"];
 
   return (
     <AppBar position="static">
-      <Toolbar sx={{ marginX: "auto", width: "90%" }}>
+      <Toolbar sx={{ marginX: "auto", width: "90%", zIndex: 2 }}>
         <Grid
           alignContent={"center"}
           container
@@ -37,15 +37,15 @@ export const HeaderAppBar = () => {
             </IconButton>
           ))}
 
-          {pages.map((page) => (
-            <MenuItem onClick={() => console.log(page)}>
-              <Typography paddingY={0}>{page}</Typography>
+          {mainMenuItems.map((menuItem) => (
+            <MenuItem onClick={() => console.log(menuItem)}>
+              <Typography paddingY={0}>{menuItem.name}</Typography>
             </MenuItem>
           ))}
 
           <Grid item marginY={"auto"}>
             <Button
-              onClick={() => console.log("donate clicked")}
+              onClick={() => console.log("button clicked")}
               sx={{ paddingX: "15px", paddingY: "4px" }}
             >
               Donate
