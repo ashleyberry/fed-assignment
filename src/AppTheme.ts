@@ -47,6 +47,6 @@ export const appTheme = createTheme({
     },
   },
   typography: {
-    fontFamily: ["Cabin", "sans-serif"].join(","),
+    fontFamily: ["Cabin", "sans-serif", "Felix", "serif"].join(","),
   },
 });
