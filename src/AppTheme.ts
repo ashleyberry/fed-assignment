@@ -21,12 +21,27 @@ export const appTheme = createTheme({
     MuiButton: {
       styleOverrides: {
         root: {
-          background: "#BFCA38",
+          background: brandGreen,
           fontSize: "1rem",
           borderRadius: "50px",
           "&:hover": {
             backgroundColor: brandGreen,
           },
+        },
+      },
+    },
+    MuiList: {
+      styleOverrides: {
+        root: {
+          backgroundColor: brandBlue,
+          color: "#fff",
+        },
+      },
+    },
+    MuiMenuItem: {
+      styleOverrides: {
+        root: {
+          justifyContent: "center",
         },
       },
     },
