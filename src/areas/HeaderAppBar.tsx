@@ -5,11 +5,13 @@ import {
   Grid,
   IconButton,
   MenuItem,
-  Toolbar,
   Typography,
 } from "@mui/material";
+import { styled } from "@mui/system";
 import { Facebook, Twitter, YouTube } from "@mui/icons-material";
+
 import { mainMenuItems } from "../data/dummyData";
+import { StyledToolbar } from "./SecondaryHeaderAppBar";
 
 export const HeaderAppBar = () => {
   const socialIcons = [
@@ -20,7 +22,7 @@ export const HeaderAppBar = () => {
 
   return (
     <AppBar position="static">
-      <Toolbar sx={{ marginX: "auto", width: "90%", zIndex: 2 }}>
+      <StyledSecondaryToolbar>
         <Grid
           alignContent={"center"}
           container
@@ -44,15 +46,21 @@ export const HeaderAppBar = () => {
           ))}
 
           <Grid item marginY={"auto"}>
-            <Button
-              onClick={() => console.log("button clicked")}
-              sx={{ paddingX: "15px", paddingY: "4px" }}
-            >
+            <StyledButton onClick={() => console.log("button clicked")}>
               Donate
-            </Button>
+            </StyledButton>
           </Grid>
         </Grid>
-      </Toolbar>
+      </StyledSecondaryToolbar>
     </AppBar>
   );
 };
+
+export const StyledButton = styled(Button)`
+  padding: 0.25rem 1rem;
+`;
+// We're extending the SecondaryHeaderAppBar's styled component,
+// and adding a z-index
+export const StyledSecondaryToolbar = styled(StyledToolbar)`
+  z-index: 1;
+`;

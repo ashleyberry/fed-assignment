@@ -1,5 +1,7 @@
 import React, { FC } from "react";
 import { Grid, Menu, MenuItem, Typography } from "@mui/material";
+import { styled } from "@mui/system";
+
 import { HeaderMenuItem } from "./SecondaryHeaderAppBar";
 
 export type SecondaryHeaderMenuItemProps = {
@@ -21,32 +23,39 @@ export const SecondaryHeaderMenuItem: FC<SecondaryHeaderMenuItemProps> = ({
 
   return (
     <Grid item key={menuItem.name}>
-      <MenuItem onClick={handleOpenDropdownMenu} sx={{ p: 0 }}>
+      <StyledMenuItem onClick={handleOpenDropdownMenu}>
         {menuItem.name}
-      </MenuItem>
+      </StyledMenuItem>
 
-      <Menu
-        sx={{ mt: "45px" }}
-        id="menu-appbar"
+      <StyledMenu
         anchorEl={anchorEl}
         anchorOrigin={{
           vertical: "top",
           horizontal: "center",
         }}
+        id="menu-appbar"
         keepMounted
+        onClose={handleCloseDropdownMenu}
+        open={Boolean(anchorEl)}
         transformOrigin={{
           vertical: "top",
           horizontal: "center",
         }}
-        open={Boolean(anchorEl)}
-        onClose={handleCloseDropdownMenu}
       >
         {menuItem.subMenuItemList?.map((subItem) => (
           <MenuItem key={subItem} onClick={handleCloseDropdownMenu}>
             <Typography textAlign="center">{subItem}</Typography>
           </MenuItem>
         ))}
-      </Menu>
+      </StyledMenu>
     </Grid>
   );
 };
+
+const StyledMenu = styled(Menu)`
+  margin-top: 2rem;
+`;
+
+const StyledMenuItem = styled(MenuItem)`
+  padding: 0;
+`;
