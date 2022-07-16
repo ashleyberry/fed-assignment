@@ -9,28 +9,26 @@ export type SecondaryHeaderMenuItemProps = {
 export const SecondaryHeaderMenuItem: FC<SecondaryHeaderMenuItemProps> = ({
   menuItem,
 }) => {
-  const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(
-    null
-  );
+  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
 
-  const handleOpenUserMenu = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorElUser(event.currentTarget);
+  const handleOpenDropdownMenu = (event: React.MouseEvent<HTMLElement>) => {
+    setAnchorEl(event.currentTarget);
   };
 
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
+  const handleCloseDropdownMenu = () => {
+    setAnchorEl(null);
   };
 
   return (
     <Grid item key={menuItem.name}>
-      <MenuItem onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+      <MenuItem onClick={handleOpenDropdownMenu} sx={{ p: 0 }}>
         {menuItem.name}
       </MenuItem>
 
       <Menu
         sx={{ mt: "45px" }}
         id="menu-appbar"
-        anchorEl={anchorElUser}
+        anchorEl={anchorEl}
         anchorOrigin={{
           vertical: "top",
           horizontal: "center",
@@ -40,11 +38,11 @@ export const SecondaryHeaderMenuItem: FC<SecondaryHeaderMenuItemProps> = ({
           vertical: "top",
           horizontal: "center",
         }}
-        open={Boolean(anchorElUser)}
-        onClose={handleCloseUserMenu}
+        open={Boolean(anchorEl)}
+        onClose={handleCloseDropdownMenu}
       >
         {menuItem.subMenuItemList?.map((subItem) => (
-          <MenuItem key={subItem} onClick={handleCloseUserMenu}>
+          <MenuItem key={subItem} onClick={handleCloseDropdownMenu}>
             <Typography textAlign="center">{subItem}</Typography>
           </MenuItem>
         ))}
