@@ -2,10 +2,10 @@ import React, { FC } from "react";
 import { Grid, Menu, MenuItem, Typography } from "@mui/material";
 import { styled } from "@mui/system";
 
-import { HeaderMenuItem } from "./SecondaryHeaderAppBar";
+import { HeaderMenuItemType } from "../data/dummyData";
 
 export type SecondaryHeaderMenuItemProps = {
-  menuItem: HeaderMenuItem;
+  menuItem: HeaderMenuItemType;
 };
 
 export const SecondaryHeaderMenuItem: FC<SecondaryHeaderMenuItemProps> = ({
