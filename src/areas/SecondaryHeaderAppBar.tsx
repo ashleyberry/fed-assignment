@@ -7,11 +7,6 @@ import { secondaryMenuItems } from "../data/dummyData";
 import { styled } from "@mui/system";
 import { OurPrograms } from "./OurPrograms";
 
-export type HeaderMenuItem = {
-  name: string;
-  subMenuItemList?: string[];
-};
-
 export const SecondaryHeaderAppBar = () => {
   return (
     <StyledAppBar position="static">
