@@ -1,3 +1,5 @@
+import React from "react";
+import { Link, Typography } from "@mui/material";
 import classroom from "./../assets/classroom.png";
 import internship from "./../assets/internship.png";
 import connect from "./../assets/connect.png";
@@ -11,33 +13,51 @@ export type HeaderMenuItemType = {
 export type OurProgramsItemType = {
   imageUrl: string;
   name: string;
+  description: React.ReactElement;
+};
+
+const handleDescriptionConversion = ({
+  description,
+  linkText,
+}: {
   description: string;
+  linkText: string;
+}) => {
+  return (
+    <Typography marginTop={1} textAlign={"center"}>
+      {description} <Link>{linkText}</Link>
+    </Typography>
+  );
 };
 
 export const ourProgramsItems: OurProgramsItemType[] = [
   {
     imageUrl: classroom,
     name: "Classroom",
-    description:
-      "Eh discovered his career interests through our classroom experiences.",
+    description: handleDescriptionConversion({
+      description: "Eh discovered his career interests through our",
+      linkText: "classroom experiences",
+    }),
   },
   {
     imageUrl: internship,
     name: "Internship",
-    description:
-      "Ingrid worked with a local agency through our partner internship program.",
+    description: handleDescriptionConversion({
+      description: "Ingrid worked with a local agency through our partner",
+      linkText: "internship program",
+    }),
   },
-  {
-    imageUrl: connect,
-    name: "Connect",
-    description:
-      "Travon made valuable professional connections through our connect program.",
-  },
-  {
-    imageUrl: fearless,
-    name: "Fearless",
-    description: "Get involved and learn more at our Fearless Conversations.",
-  },
+  // {
+  //   imageUrl: connect,
+  //   name: "Connect",
+  //   description:
+  //     "Travon made valuable professional connections through our connect program",
+  // },
+  // {
+  //   imageUrl: fearless,
+  //   name: "Fearless",
+  //   description: "Get involved and learn more at our Fearless Conversations",
+  // },
 ];
 
 export const mainMenuItems: HeaderMenuItemType[] = [

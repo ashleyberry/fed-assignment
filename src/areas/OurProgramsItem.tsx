@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { Box, Grid, Typography } from "@mui/material";
+import { Box, Grid, Link, Typography } from "@mui/material";
 import { styled } from "@mui/system";
 
 import { OurProgramsItemType } from "../data/dummyData";
@@ -21,9 +21,7 @@ export const OurProgramsItem: FC<OurProgramsItemProps> = ({ item }) => {
         >
           {item.name}
         </Typography>
-        <Typography marginTop={1} textAlign={"center"}>
-          {item.description}
-        </Typography>
+        <Grid container>{item.description}</Grid>
       </StyledBox>
     </Grid>
   );
