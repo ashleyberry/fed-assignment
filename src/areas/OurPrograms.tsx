@@ -1,21 +1,36 @@
 import React, { FC } from "react";
-import { Paper, Typography } from "@mui/material";
+import { Grid, Paper, Typography } from "@mui/material";
 import { styled } from "@mui/system";
+import { ourProgramsItems } from "../data/dummyData";
+import { OurProgramsItem } from "./OurProgramsItem";
 
 export type OurProgramsProps = {};
 
 export const OurPrograms: FC<OurProgramsProps> = () => {
   return (
     <StyledPaper>
-      <Typography fontWeight={"bold"} textAlign={"center"}>
+      <Typography
+        fontSize={"20px"}
+        fontWeight={"bold"}
+        marginY={2}
+        textAlign={"center"}
+      >
         Our Programs
       </Typography>
+
+      <Grid container>
+        {ourProgramsItems.map((item) => (
+          <OurProgramsItem key={item.name} item={item} />
+        ))}
+      </Grid>
     </StyledPaper>
   );
 };
 
 export const StyledPaper = styled(Paper)`
-  bottom: 20px;
+  border: 3px solid #eeeeee;
+  border-radius: 8px;
+  bottom: -25rem;
   left: 50%;
   position: absolute;
   transform: translate(-50%, -50%);

@@ -1,14 +1,34 @@
 import React, { FC } from "react";
-import { Grid, Typography } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
+import { styled } from "@mui/system";
 
-export type OurProgramsItemProps = {};
+import { OurProgramsItemType } from "../data/dummyData";
 
-export const OurProgramsItem: FC<OurProgramsItemProps> = (props) => {
+export type OurProgramsItemProps = {
+  item: OurProgramsItemType;
+};
+
+export const OurProgramsItem: FC<OurProgramsItemProps> = ({ item }) => {
   return (
-    <Grid container>
-      <Grid item>
-        <Typography>OurProgramsItem</Typography>
-      </Grid>
+    <Grid item justifyContent={"center"} overflow={"hidden"} width={"25%"}>
+      <img src={item.imageUrl} alt={item.name} />
+      <StyledBox>
+        <Typography
+          letterSpacing={2}
+          fontSize={".75em"}
+          textAlign={"center"}
+          textTransform={"uppercase"}
+        >
+          {item.name}
+        </Typography>
+        <Typography marginTop={1} textAlign={"center"}>
+          {item.description}
+        </Typography>
+      </StyledBox>
     </Grid>
   );
 };
+
+export const StyledBox = styled(Box)`
+  padding: 0.75rem 0.5rem 1.5rem;
+`;
