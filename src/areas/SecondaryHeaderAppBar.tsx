@@ -60,6 +60,7 @@ export const SecondaryHeaderAppBar = () => {
 // I could move this to a "shared" directory, but as this is a small project,
 // I'm going to keep them in the same file as the component that uses them.
 export const StyledAppBar = styled(AppBar)`
+  padding-top: 1rem;
   position: relative;
   background-image: url(${backgroundImage});
   background-repeat: no-repeat;
