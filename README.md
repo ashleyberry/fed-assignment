@@ -28,8 +28,12 @@ Personally, I think the pros of using Styled Components outweighs the cons.
 * [MUI](https://mui.com/)
 * [Styled Components](https://www.styled-components.com/)
 
+### Prerequisites
+* NPM
+
 ## Development Setup Instructions
-- Run `npm install` from the project root directory
-- Run `npm start`
-- Runs the app in the development mode.
-- Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. Clone repo
+2. Run `npm install` from the project root directory
+3. Run `npm start`
+
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
