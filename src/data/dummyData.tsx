@@ -25,7 +25,7 @@ const handleDescriptionConversion = ({
 }) => {
   return (
     <Typography marginTop={1} textAlign={"center"}>
-      {description} <Link>{linkText}</Link>
+      {description} <Link>{linkText}</Link>.
     </Typography>
   );
 };
@@ -47,17 +47,22 @@ export const ourProgramsItems: OurProgramsItemType[] = [
       linkText: "internship program",
     }),
   },
-  // {
-  //   imageUrl: connect,
-  //   name: "Connect",
-  //   description:
-  //     "Travon made valuable professional connections through our connect program",
-  // },
-  // {
-  //   imageUrl: fearless,
-  //   name: "Fearless",
-  //   description: "Get involved and learn more at our Fearless Conversations",
-  // },
+  {
+    imageUrl: connect,
+    name: "Connect",
+    description: handleDescriptionConversion({
+      description: "Travon made valuable professional connections through our ",
+      linkText: "connect program",
+    }),
+  },
+  {
+    imageUrl: fearless,
+    name: "Fearless",
+    description: handleDescriptionConversion({
+      description: "Get involved and learn more at our",
+      linkText: "Fearless Conversations",
+    }),
+  },
 ];
 
 export const mainMenuItems: HeaderMenuItemType[] = [
