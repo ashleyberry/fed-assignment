@@ -30,7 +30,7 @@ export const OurPrograms: FC<OurProgramsProps> = () => {
 export const StyledPaper = styled(Paper)`
   border: 3px solid #eeeeee;
   border-radius: 8px;
-  bottom: -25rem;
+  bottom: -30rem;
   left: 50%;
   position: absolute;
   transform: translate(-50%, -50%);

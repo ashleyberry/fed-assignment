@@ -28,7 +28,6 @@ export const SecondaryHeaderAppBar = () => {
             marginX={"auto"}
             width={"50%"}
             textAlign={"center"}
-            fontFamily={"Felix"}
             color={(theme) => theme.palette.text.secondary}
             variant="h4"
             component="h1"
@@ -69,6 +68,7 @@ export const StyledAppBar = styled(AppBar)`
   background-size: cover;
   height: 80vh;
   justify-content: center;
+  margin-bottom: 25rem;
 `;
 
 export const StyledToolbar = styled(Toolbar)`
