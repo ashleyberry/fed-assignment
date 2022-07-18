@@ -61,7 +61,7 @@ export const appTheme = createTheme({
     },
   },
   typography: {
-    fontFamily: ["Cabin", "sans-serif", "Felix", "serif"].join(","),
+    fontFamily: ["Cabin", "sans-serif", "Fenix", "serif"].join(","),
     fontWeightLight: 300,
     fontWeightRegular: 400,
     fontWeightMedium: 600,
@@ -70,13 +70,16 @@ export const appTheme = createTheme({
       fontWeight: 700,
     },
     h2: {
-      fontWeight: 700,
+      fontFamily: ["Fenix", "serif"].join(","),
+      color: brandGrey,
+      fontSize: "3em",
     },
     h3: {
       fontWeight: 700,
     },
     h4: {
       fontWeight: 500,
+      fontFamily: ["Fenix", "serif"].join(","),
     },
     h5: {
       fontWeight: 700,
