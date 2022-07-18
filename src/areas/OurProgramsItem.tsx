@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { Box, Grid, Link, Typography } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 import { styled } from "@mui/system";
 
 import { OurProgramsItemType } from "../data/dummyData";
@@ -13,12 +13,7 @@ export const OurProgramsItem: FC<OurProgramsItemProps> = ({ item }) => {
     <Grid item justifyContent={"center"} overflow={"hidden"} width={"25%"}>
       <img src={item.imageUrl} alt={item.name} />
       <StyledBox>
-        <Typography
-          letterSpacing={2}
-          fontSize={".75em"}
-          textAlign={"center"}
-          textTransform={"uppercase"}
-        >
+        <Typography variant={"body2"} fontSize={".75em"} textAlign={"center"}>
           {item.name}
         </Typography>
         <Grid container>{item.description}</Grid>
@@ -28,5 +23,5 @@ export const OurProgramsItem: FC<OurProgramsItemProps> = ({ item }) => {
 };
 
 export const StyledBox = styled(Box)`
-  padding: 0.75rem 0.5rem 1.5rem;
+  padding: 0.75rem 1rem 1.5rem;
 `;

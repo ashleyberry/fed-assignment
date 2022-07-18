@@ -10,8 +10,8 @@ export const OurPrograms: FC<OurProgramsProps> = () => {
   return (
     <StyledPaper>
       <Typography
-        fontSize={"20px"}
-        fontWeight={"bold"}
+        variant={"h6"}
+        component={"h2"}
         marginY={2}
         textAlign={"center"}
       >
