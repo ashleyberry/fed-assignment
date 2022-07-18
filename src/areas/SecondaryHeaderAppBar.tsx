@@ -29,7 +29,9 @@ export const SecondaryHeaderAppBar = () => {
             width={"50%"}
             textAlign={"center"}
             fontFamily={"Felix"}
-            fontSize={"2em"}
+            color={(theme) => theme.palette.text.secondary}
+            variant="h4"
+            component="h1"
           >
             We believe in a future industry that reaches new heights through the
             creativity of people of any race or socioeconomic background.

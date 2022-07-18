@@ -44,7 +44,9 @@ export const SecondaryHeaderMenuItem: FC<SecondaryHeaderMenuItemProps> = ({
       >
         {menuItem.subMenuItemList?.map((subItem) => (
           <MenuItem key={subItem} onClick={handleCloseDropdownMenu}>
-            <Typography textAlign="center">{subItem}</Typography>
+            <Typography variant={"body1"} textAlign="center">
+              {subItem}
+            </Typography>
           </MenuItem>
         ))}
       </StyledMenu>
