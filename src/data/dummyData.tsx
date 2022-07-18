@@ -24,7 +24,7 @@ const handleDescriptionConversion = ({
   linkText: string;
 }) => {
   return (
-    <Typography marginTop={1} textAlign={"center"}>
+    <Typography component={"h3"} marginTop={1} textAlign={"center"}>
       {description} <Link>{linkText}</Link>.
     </Typography>
   );
