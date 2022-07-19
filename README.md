@@ -24,7 +24,7 @@ I chose to use Styled Components for this single-page app because of the followi
 
 :white_check_mark: did you know you can [unit test Styled Components?!](https://github.com/styled-components/jest-styled-components)
 
-All of these reasons mean I can get more done in a shorter amount of time, hence why I chose to implement Styled Components.
+I chose to implement Styled Components for all of these reasons plus the simple fact that I can get more done in a shorter amount.
 
 ### Built With
 
