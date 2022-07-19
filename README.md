@@ -33,6 +33,7 @@ I chose to implement Styled Components for all of these reasons plus the simple 
 
 ### Prerequisites
 * NPM
+* Due to the timeline, responsiveness was out of scope for this project. This project is optimized for a 13.3-inch (2560x1600) monitor.
 
 ## Development Setup Instructions
 1. Clone this repo
