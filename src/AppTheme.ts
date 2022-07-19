@@ -1,10 +1,12 @@
 import { createTheme } from "@mui/material";
 
+export const backgroundColor = "#E5E5E5";
 export const brandBlue = "#272C44";
+export const brandDarkGrey = "#333333";
 export const brandGreen = "#BFCA38";
 export const brandGrey = "#52596D";
-export const backgroundColor = "#E5E5E5";
-export const headingColor = "#52596D";
+export const brandLightGrey = "#666666";
+export const brandHeadingColor = "#52596D";
 export const white = "#FFFFFF";
 
 export const appTheme = createTheme({
@@ -17,9 +19,11 @@ export const appTheme = createTheme({
     },
     secondary: {
       main: brandGrey,
+      dark: brandDarkGrey,
+      light: brandLightGrey,
     },
     text: {
-      primary: headingColor,
+      primary: brandHeadingColor,
       secondary: white,
     },
   },
@@ -28,8 +32,11 @@ export const appTheme = createTheme({
       styleOverrides: {
         root: {
           background: brandGreen,
-          fontSize: "1rem",
+          fontSize: "large",
+          fontWeight: "bold",
           borderRadius: "50px",
+          padding: "0.25rem 1rem",
+          textTransform: "none",
           "&:hover": {
             backgroundColor: brandGreen,
           },
@@ -86,14 +93,15 @@ export const appTheme = createTheme({
     },
     h6: {
       fontWeight: 700,
+      fontSize: "1em",
     },
     body1: {
       fontWeight: 400,
     },
     body2: {
       letterSpacing: "0.25em",
-      textTransform: "uppercase",
       fontWeight: 400,
+      textTransform: "uppercase",
     },
   },
 });
