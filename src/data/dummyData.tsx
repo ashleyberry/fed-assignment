@@ -16,6 +16,11 @@ export type OurProgramsItemType = {
   description: React.ReactElement;
 };
 
+export type SocialMediaIconType = {
+  name: string;
+  icon: JSX.Element;
+};
+
 const handleDescriptionConversion = ({
   description,
   linkText,
@@ -25,10 +30,22 @@ const handleDescriptionConversion = ({
 }) => {
   return (
     <Typography component={"h3"} marginTop={1} textAlign={"center"}>
-      {description} <Link>{linkText}</Link>.
+      {description} <Link href={"#"}>{linkText}</Link>.
     </Typography>
   );
 };
+
+export const mainMenuItems: HeaderMenuItemType[] = [
+  {
+    name: "About",
+  },
+  {
+    name: "News",
+  },
+  {
+    name: "Contact",
+  },
+];
 
 export const ourProgramsItems: OurProgramsItemType[] = [
   {
@@ -65,16 +82,11 @@ export const ourProgramsItems: OurProgramsItemType[] = [
   },
 ];
 
-export const mainMenuItems: HeaderMenuItemType[] = [
-  {
-    name: "About",
-  },
-  {
-    name: "News",
-  },
-  {
-    name: "Contact",
-  },
+export const partners: string[] = [
+  "America’s Promise Alliance",
+  "Garmin",
+  "H&R Block",
+  "Best Buy",
 ];
 
 export const secondaryMenuItems: HeaderMenuItemType[] = [
