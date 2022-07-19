@@ -35,7 +35,7 @@ I chose to implement Styled Components for all of these reasons plus the simple 
 * NPM
 
 ## Development Setup Instructions
-1. Clone repo
+1. Clone this repo
 2. Run `npm install` from the project root directory
 3. Run `npm start`
 
