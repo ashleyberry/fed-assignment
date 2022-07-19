@@ -9,12 +9,11 @@ import {
 } from "@mui/material";
 import { styled } from "@mui/system";
 import { Facebook, Twitter, YouTube } from "@mui/icons-material";
-
-import { mainMenuItems } from "../data/dummyData";
+import { mainMenuItems, SocialMediaIconType } from "../data/dummyData";
 import { StyledToolbar } from "./SecondaryHeaderAppBar";
 
 export const HeaderAppBar = () => {
-  const socialIcons = [
+  const socialIcons: SocialMediaIconType[] = [
     { name: "Facebook", icon: <Facebook /> },
     { name: "Twitter,", icon: <Twitter /> },
     { name: "YouTube", icon: <YouTube /> },
@@ -57,7 +56,7 @@ export const HeaderAppBar = () => {
 };
 
 export const StyledButton = styled(Button)`
-  padding: 0.25rem 1rem;
+  font-size: medium;
 `;
 // We're extending the SecondaryHeaderAppBar's styled component,
 // and adding a z-index
