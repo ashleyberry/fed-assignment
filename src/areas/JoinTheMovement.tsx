@@ -1,25 +1,29 @@
-import React, { FC } from "react";
-import { Grid, Typography } from "@mui/material";
+import React from "react";
+import { Button, Grid, Typography } from "@mui/material";
 import { styled } from "@mui/system";
+import { Partners } from "./Partners";
 
-export type JoinTheMovementProps = {};
-
-export const JoinTheMovement: FC<JoinTheMovementProps> = (props) => {
+export const JoinTheMovement = () => {
   return (
     <StyledGridContainer container>
       <Grid item md={8}>
-        <Typography component={"h2"} variant={"h2"}>
+        <Typography component={"h2"} marginBottom={5} variant={"h2"}>
           Help us change the face and voice of the marketing industry.
         </Typography>
+        <StyledButton>Join the movement</StyledButton>
       </Grid>
-      <Grid item>
-        <Typography>Thank you to our current partners:</Typography>
-      </Grid>
+
+      <Partners />
     </StyledGridContainer>
   );
 };
 
 export const StyledGridContainer = styled(Grid)`
   width: 75%;
-  margin: 0 auto;
+  margin: 0 auto 10rem;
+`;
+
+export const StyledButton = styled(Button)`
+  font-size: larger;
+  padding: 0.5rem 2rem;
 `;
