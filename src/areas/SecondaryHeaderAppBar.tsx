@@ -1,24 +1,22 @@
 import React from "react";
-import { AppBar, Button, Grid, Toolbar, Typography } from "@mui/material";
+import { AppBar, Grid, Toolbar } from "@mui/material";
 import { SecondaryHeaderMenuItem } from "./SecondaryHeaderItem";
-import backgroundImage from "./../assets/background-image.png";
 import logo from "./../assets/the-brand-lab-logo.png";
 import { secondaryMenuItems } from "../data/dummyData";
 import { styled } from "@mui/system";
-import { OurPrograms } from "./OurPrograms";
 
 export const SecondaryHeaderAppBar = () => {
   return (
     <StyledAppBar position={"absolute"}>
       <StyledToolbar>
         <Grid container justifyContent={"space-between"}>
-          <img alt={"BrandLab Logo"} src={logo} />
           <Grid item>
-            <Grid container spacing={7}>
-              {secondaryMenuItems.map((menuItem) => (
-                <SecondaryHeaderMenuItem menuItem={menuItem} />
-              ))}
-            </Grid>
+            <img alt={"BrandLab Logo"} src={logo} />
+          </Grid>
+          <Grid item display={"flex"}>
+            {secondaryMenuItems.map((menuItem) => (
+              <SecondaryHeaderMenuItem menuItem={menuItem} />
+            ))}
           </Grid>
         </Grid>
       </StyledToolbar>

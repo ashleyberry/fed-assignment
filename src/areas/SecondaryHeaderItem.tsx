@@ -22,7 +22,7 @@ export const SecondaryHeaderMenuItem: FC<SecondaryHeaderMenuItemProps> = ({
   };
 
   return (
-    <Grid item key={menuItem.name}>
+    <Grid item marginX={4} key={menuItem.name}>
       <StyledMenuItem onClick={handleOpenDropdownMenu}>
         {menuItem.name}
       </StyledMenuItem>

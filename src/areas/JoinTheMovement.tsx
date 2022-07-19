@@ -5,23 +5,23 @@ import { Partners } from "./Partners";
 
 export const JoinTheMovement = () => {
   return (
-    <StyledGridContainer container>
+    <Grid container marginTop={7} paddingBottom={10}>
       <Grid item md={8}>
-        <Typography component={"h2"} marginBottom={5} variant={"h2"}>
+        <Typography
+          component={"h2"}
+          marginBottom={5}
+          variant={"h2"}
+          width={"80%"}
+        >
           Help us change the face and voice of the marketing industry.
         </Typography>
         <StyledButton>Join the movement</StyledButton>
       </Grid>
 
       <Partners />
-    </StyledGridContainer>
+    </Grid>
   );
 };
-
-export const StyledGridContainer = styled(Grid)`
-  width: 75%;
-  margin: 0 auto 10rem;
-`;
 
 export const StyledButton = styled(Button)`
   font-size: larger;
