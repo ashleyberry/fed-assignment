@@ -7,7 +7,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 A single page web app replicating visual components from a Figma wireframe to help evaluate how I organize CSS, my overall approach to the assignment and how well I implement the chosen technologies. 
 
 ### The 'Why' behind the choice to use Styled Components
-Topics some avoid during family get-togethers: politics, religion, and CSS styling. 
+Topics some folks tend to avoid during family get-togethers: politics, religion, and CSS styling. :nail_care: 
 
 Styling of CSS styling is heavily debated. Even if Styled Components isn't your personal favorite approach to CSS, I ask that you keep an open mind (and maybe grab another serving of mashed potatoes).
 I chose to use Styled Components for this single-page app because of the following:
