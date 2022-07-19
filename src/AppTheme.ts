@@ -74,12 +74,14 @@ export const appTheme = createTheme({
     fontWeightMedium: 600,
     fontWeightBold: 900,
     h1: {
-      fontWeight: 700,
+      fontFamily: ["Fenix", "serif"].join(","),
+      color: brandGrey,
+      fontSize: "3em",
     },
     h2: {
       fontFamily: ["Fenix", "serif"].join(","),
       color: brandGrey,
-      fontSize: "3em",
+      fontSize: "2.5em",
     },
     h3: {
       fontWeight: 700,
