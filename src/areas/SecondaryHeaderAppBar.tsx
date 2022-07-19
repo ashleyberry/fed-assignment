@@ -9,8 +9,8 @@ import { OurPrograms } from "./OurPrograms";
 
 export const SecondaryHeaderAppBar = () => {
   return (
-    <StyledAppBar position="static">
-      <StyledToolbar disableGutters>
+    <StyledAppBar position={"absolute"}>
+      <StyledToolbar>
         <Grid container justifyContent={"space-between"}>
           <img alt={"BrandLab Logo"} src={logo} />
           <Grid item>
@@ -22,29 +22,6 @@ export const SecondaryHeaderAppBar = () => {
           </Grid>
         </Grid>
       </StyledToolbar>
-      <Grid container justifyContent={"center"} marginY={"auto"}>
-        <Grid item>
-          <Typography
-            marginX={"auto"}
-            width={"50%"}
-            textAlign={"center"}
-            color={(theme) => theme.palette.text.secondary}
-            variant="h4"
-            component="h1"
-          >
-            We believe in a future industry that reaches new heights through the
-            creativity of people of any race or socioeconomic background.
-          </Typography>
-        </Grid>
-
-        <Grid item marginTop={5} textAlign={"center"}>
-          <Button onClick={() => console.log("clicked button")}>
-            Learn More
-          </Button>
-        </Grid>
-      </Grid>
-
-      <OurPrograms />
     </StyledAppBar>
   );
 };
@@ -53,14 +30,12 @@ export const SecondaryHeaderAppBar = () => {
 // I could move this to a "shared" directory, but as this is a small project,
 // I'm going to keep them in the same file as the component that uses them.
 export const StyledAppBar = styled(AppBar)`
-  padding-top: 1rem;
   position: relative;
-  background-image: url(${backgroundImage});
+  background-color: transparent;
   background-repeat: no-repeat;
-  background-size: cover;
-  height: 80vh;
+  background-size: contain;
   justify-content: center;
-  margin-bottom: 25rem;
+  box-shadow: none;
 `;
 
 export const StyledToolbar = styled(Toolbar)`

@@ -33,7 +33,7 @@ I chose to implement Styled Components for all of these reasons plus the simple 
 
 ### Prerequisites
 * NPM
-* Due to the timeline, responsiveness was out of scope for this project. This project is optimized for a 13.3-inch (2560x1600) monitor.
+* Due to the expedited timeline, responsiveness was out of scope for this project. This project is optimized for a 13.3-inch (2560x1600) monitor.
 
 ## Development Setup Instructions
 1. Clone this repo
@@ -41,3 +41,4 @@ I chose to implement Styled Components for all of these reasons plus the simple 
 3. Run `npm start`
 
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+

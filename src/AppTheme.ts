@@ -87,6 +87,7 @@ export const appTheme = createTheme({
     h4: {
       fontWeight: 500,
       fontFamily: ["Fenix", "serif"].join(","),
+      fontSize: "2.5em",
     },
     h5: {
       fontWeight: 700,

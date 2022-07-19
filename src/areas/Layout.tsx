@@ -1,14 +1,16 @@
 import React from "react";
 import { HeaderAppBar } from "./HeaderAppBar";
 import { SecondaryHeaderAppBar } from "./SecondaryHeaderAppBar";
-import { JoinTheMovement } from "./JoinTheMovement";
+import { OurPrograms } from "./OurPrograms";
+import { Hero } from "./Hero";
 
 export const Layout = () => {
   return (
     <>
       <HeaderAppBar />
       <SecondaryHeaderAppBar />
-      <JoinTheMovement />
+      <Hero />
+      <OurPrograms />
     </>
   );
 };
