@@ -11,11 +11,17 @@ Topics some folks tend to avoid during family get-togethers: politics, religion,
 
 Styling of CSS styling is heavily debated. Even if Styled Components isn't your personal favorite approach to CSS, I ask that you keep an open mind (and maybe grab another serving of mashed potatoes).
 I chose to use Styled Components for this single-page app because of the following:
-:white_check_mark: it's a flexible approach to CSS styling.
+
+:white_check_mark: it's a flexible approach to CSS styling
+
 :white_check_mark: it allows me to add, change and delete CSS without any unexpected consequences.
+
 :white_check_mark: it allows for styles to be clearly defined and easy to understand.
+
 :white_check_mark: they're easily reusable across the entire project.
+
 :white_check_mark: it avoids CSS files, which can quickly get hefty and complex.
+
 :white_check_mark: did you know you can [unit test Styled Components?!](https://github.com/styled-components/jest-styled-components)
 
 All of these reasons mean I can get more done in a shorter amount of time, hence why I chose to implement Styled Components.
