@@ -39,15 +39,7 @@ export const SecondaryHeaderAppBar = () => {
 
         <Grid item marginTop={5} textAlign={"center"}>
           <Button onClick={() => console.log("clicked button")}>
-            <Typography
-              fontSize={18}
-              paddingX={2}
-              paddingY={0.5}
-              textTransform={"none"}
-              fontWeight={"bold"}
-            >
-              Learn More
-            </Typography>
+            Learn More
           </Button>
         </Grid>
       </Grid>
