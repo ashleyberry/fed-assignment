@@ -21,7 +21,7 @@ export const HeaderAppBar = () => {
 
   return (
     <AppBar position="static">
-      <StyledSecondaryToolbar>
+      <StyledToolbar>
         <Grid
           alignContent={"center"}
           container
@@ -50,16 +50,11 @@ export const HeaderAppBar = () => {
             </StyledButton>
           </Grid>
         </Grid>
-      </StyledSecondaryToolbar>
+      </StyledToolbar>
     </AppBar>
   );
 };
 
 export const StyledButton = styled(Button)`
   font-size: medium;
-`;
-// We're extending the SecondaryHeaderAppBar's styled component,
-// and adding a z-index
-export const StyledSecondaryToolbar = styled(StyledToolbar)`
-  z-index: 1;
 `;
